@@ -2,6 +2,7 @@
 ## Knows everything. Tells no one.
 
 Privar is a personal intelligence system that runs entirely on your own hardware[1]. It knows your whole life -- health, finances, relationships, legal, home, spatial -- and acts on it through agents. All intelligence is local. All data is private. All storage is on-premise.
+
 [1] Alpha release assumes a local Mac device with Apple Metal and Apple Silicon with sufficient resources to run local AI. There are plans to support running it in enterprise environments including cloud providers, Kubernetes, etc. A future release will enable segmentation of your AI infrastructure, application components, databases, and other infrastructure. 
 
 ## Architecture
