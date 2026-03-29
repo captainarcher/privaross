@@ -57,7 +57,7 @@ Privar is a personal intelligence system that runs entirely on your own hardware
 - **Podman** (rootless, daemonless) -- not Docker
 - **OpenBao** manages all secrets and database credentials dynamically -- nothing hardcoded in env files
 - **Argus** monitors agent behavior in real-time using a Graph Neural Network
-- **nono.sh** provides kernel-level sandboxing (Landlock/Seatbelt) for agent containers
+- **[nono.sh]** provides kernel-level sandboxing (Landlock/Seatbelt) for agent containers
 - **Ollama and ML services** run on the host for direct GPU access (Metal, CUDA)
 
 ## Agent Security
