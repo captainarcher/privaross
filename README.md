@@ -33,7 +33,7 @@ Privar is a personal intelligence system that runs entirely on your own hardware
                      +-------------------------+
                      |    Data & Infrastructure |
                      +-------------------------+
-                     | PostgreSQL + pgvector    |
+                     | PostgreSQL    |
                      |   + Apache AGE (graph)   |
                      |   + TimescaleDB (tsdb)   |
                      | Qdrant (vectors)         |
@@ -58,7 +58,7 @@ Privar is a personal intelligence system that runs entirely on your own hardware
 - **OpenBao** manages all secrets and database credentials dynamically -- nothing hardcoded in env files
 - **Argus** monitors agent behavior in real-time using a Graph Neural Network
 - **[nono.sh]** provides kernel-level sandboxing (Landlock/Seatbelt) for agent containers
-- **Ollama and ML services** run on the host for direct GPU access (Metal, CUDA)
+- **Ollama and ML services** run on the host for direct GPU access (Metal, CUDA). These can run on the same machine as other services or other machines. Both Apple Silicon and NVIDIA (tested on DGX Spark) are currently supported.
 
 ## Agent Security
 
@@ -68,7 +68,7 @@ Privar uses a multi-layer security model for agents:
 2. **OpenBao transit encryption** -- all agent data encrypted at rest and in transit
 3. **Argus GNN monitoring** -- real-time behavioral anomaly detection via graph neural network
 4. **nono.sh kernel sandboxing** -- Landlock/Seatbelt isolation with atomic rollback on violations
-5. **Rootless Podman containers** -- user namespace isolation, no root daemon
+5. **Rootless Podman containers** -- user namespace isolation, no root daemon (some services run directly on the host)
 6. **Cryptographic audit trails** -- Sigstore-signed logs for forensic analysis
 
 ## CLI Examples
@@ -140,8 +140,9 @@ privar profile switch <id>
 ## Requirements
 
 - macOS
-- Apple Silicon (tested on M4 Max with 36gb RAM)
+- Apple Silicon (tested on M4 Max with 36gb RAM and a M3 Ultra with 96gb RAM)
 - Podman 4.4+
+- ML components can also run on NVIDIA hardware (tested on a DGX Spark with 128gb RAM)
 
 ## License
 
