@@ -5,6 +5,14 @@ Privar is a personal intelligence system that runs entirely on your own hardware
 
 [1] Alpha release assumes a local Mac device with Apple Metal and Apple Silicon with sufficient resources to run local AI. There are plans to support running it in enterprise environments including cloud providers, Kubernetes, etc. A future release will enable segmentation of your AI infrastructure, application components, databases, and other infrastructure. 
 
+## Roadmap
+  - v0.1.0-alpha: Auto-ingest, intelligence foundation (Bayesian learning), multi-directory, agents, health life domain support, Apple Health import, Epic Health Portal import, supervisory agents, initial CLI, initial GUI, workflow engine, documents import and knowledge graph (rudimentary), memory, Argus security with GNN, service health, multi-node deployment (Apple Silicon and NVIDIA DGX Spark).
+  - v0.2.0-alpha: April 9, 2026. Wiki synthesis, dual-mode editor, wiki-derived graph, L0-L3 memory, diagnostics, LLM playground, skills registry, documents auto-ingest (local). <---We are here
+  - v0.3.0-alpha: Adaptive retrieval, LLM context injection, smart briefings, proactive notifications, wiki-aware intelligence, auto-ingest settings UI, conversation log persistence, documents Qdrant embedding dimension verification and alignment
+  - v0.4.0-alpha: Initial public release - mid-April. documents auto-ingest (cloud sources), initial MCP support, image analysis, GNN-based adaptive security validation with adversarial agents, agent builder with natural language interface, multi-agent chaining improvements (co-pilot and YOLO modes)
+  - v0.5.0-beta: late-April. ML-powered analysis of JPG, PNG, TIFF, and PDF files. OCR, object detection, scene understanding, and content extraction to feed into the knowledge graph and make visual content searchable and queryable.
+  - v0.6.0-beta: mid-May. UI improvements. 
+  - v0.7.0-gamma: late-May. Voice agent functional.
 ## Architecture
 
 ```
